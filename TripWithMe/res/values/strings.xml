@@ -10,6 +10,11 @@
     <string name="list_item_01">travler</string>
     <string name="list_item_02">helper</string>
     <string name="search_helper">도시, 랜드마크, 키워드로 검색하세요</string>
+    
     <string name="title_activity_login">LoginActivity</string>
+    <string name="resend">재발송</string>
+    <string name="okBtn">확인</string>
+    <string name="samplePhone">+82)010-1234-5678</string>
+    <string name="certNo">인증번호</string>
 
 </resources>

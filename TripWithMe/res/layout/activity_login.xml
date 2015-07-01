@@ -44,7 +44,7 @@
                     android:layout_weight="1"
                     android:textSize="6.5pt"
                     android:ems="10"
-                    android:hint="+82)010-1234-5678" />
+                    android:hint="@string/samplePhone" />
             </LinearLayout>
 
             <LinearLayout
@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="6.5pt"
-                    android:hint="인증번호" />
+                    android:hint="@string/certNo" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,7 +78,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/login_btn_ok2"
                     android:textSize="6.5pt"
-                    android:text="재발송" />
+                    android:text="@string/resend" />
 
                 <Button
                     android:id="@+id/okBtn"
@@ -88,7 +88,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/login_btn_ok2"
                     android:textSize="6.5pt"
-                    android:text="확인" />
+                    android:text="@string/okBtn" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
