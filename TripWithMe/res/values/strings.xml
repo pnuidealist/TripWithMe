@@ -4,8 +4,12 @@
     <string name="app_name">TripWithMe</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-	<color name="mainBarBgColor">#41e5b2</color>
-	<string name="list_item_01">travler</string>
+
+    <color name="mainBarBgColor">#41e5b2</color>
+
+    <string name="list_item_01">travler</string>
     <string name="list_item_02">helper</string>
     <string name="search_helper">도시, 랜드마크, 키워드로 검색하세요</string>
+    <string name="title_activity_login">LoginActivity</string>
+
 </resources>
