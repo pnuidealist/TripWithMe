@@ -1,16 +1,173 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.tripwithme.MainActivity" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="13" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <!-- 메뉴표시줄 -->
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/mainBarBgColor"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/main_btn_popup_menu"
+            android:layout_width="35dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/main_btn_popup_menu" />
+
+        <Button
+            android:id="@+id/main_btn_logo"
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/main_btn_logo"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:id="@+id/main_btn_mypage"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/main_btn_mypage" />
+
+        <Button
+            android:id="@+id/main_btn_write_contents"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/main_btn_mypage"
+            android:layout_toStartOf="@id/main_btn_mypage"
+            android:background="@drawable/main_btn_write_contents" />
+    </RelativeLayout>
+    <!-- 검색창과 큰 그림 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/brazil"
+        android:orientation="horizontal" >
+
+        <!-- 검색창 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/main_editbox_search"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/user_sel_spinner"
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="0dp"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/user_sel_spinner" />
+
+            <Button
+                android:id="@+id/calender"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/user_sel_spinner"
+                android:layout_toRightOf="@id/user_sel_spinner"
+                android:background="@drawable/main_btn_calendar" />
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="440dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_toEndOf="@id/calender"
+                android:layout_toRightOf="@id/calender"
+                android:hint="@string/search_helper"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/main_btn_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/main_btn_search" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 트립위드미 추천 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:weightSum="11" >
+
+        <Button
+            android:id="@+id/main_label_recommend"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_label_recommend" />
+
+        <Button
+            android:id="@+id/recommendTop"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@drawable/main_sample_recommend1" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <Button
+                android:id="@+id/recommendLeft"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_sample_recommend2" />
+
+            <Button
+                android:id="@+id/recommendRight"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/main_sample_recommend3" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+<!-- </FrameLayout> -->
