@@ -2,11 +2,16 @@ package com.example.tripwithme;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
+	
+	Button popup;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +19,17 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		ActionBar actionBar = getActionBar();
 		actionBar.hide();
+		Intent intent=new Intent(MainActivity.this, LoginActivity.class);
+		startActivity(intent);
+		/*popup=(Button)findViewById(R.id.main_btn_popup_menu);
+		popup.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+			}
+		});*/
 	}
 
 	@Override
