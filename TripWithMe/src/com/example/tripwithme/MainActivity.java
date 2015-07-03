@@ -12,12 +12,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 	
 	private Button navBarButton;
 	private DrawerLayout mDrawerLayout;
 	Button main_btn_mypage;
+	ImageView profile_picture;
+	boolean menu_toggle=false; //true=open, false=close
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,16 @@ public class MainActivity extends Activity {
 		ActionBar actionBar = getActionBar();
 		actionBar.hide();
 		
+		profile_picture=(ImageView)findViewById(R.id.drawer_picture);
+		profile_picture.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent mypageIntent=new Intent(MainActivity.this, ProfileActivity.class);
+				startActivity(mypageIntent);
+			}
+		});
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
 		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
@@ -33,7 +46,14 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				mDrawerLayout.openDrawer(Gravity.START);
+				if (menu_toggle==false)	{
+					mDrawerLayout.openDrawer(Gravity.START);
+					menu_toggle=true;
+				}
+				else {
+					mDrawerLayout.closeDrawer(Gravity.START);
+					menu_toggle=false;
+				}
 			}
 		});
 		main_btn_mypage.setOnClickListener(new View.OnClickListener() {
