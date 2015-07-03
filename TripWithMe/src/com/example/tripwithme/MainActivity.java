@@ -6,6 +6,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.Menu;
@@ -21,7 +22,6 @@ public class MainActivity extends Activity {
 	
 	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
 	ImageView profile_picture; //메뉴 안 프로필 사진
-	//boolean menu_toggle=false; //메뉴오픈여부- true=open, false=close
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +32,16 @@ public class MainActivity extends Activity {
 		actionBar.hide();
 		
 		profile_picture=(ImageView)findViewById(R.id.drawer_picture);
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
+		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
+		
+		//jjy 050704) drawerlayout 그림자 추가
+		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+		mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
+		
+		//프로필 사진 버튼
 		profile_picture.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -41,14 +49,12 @@ public class MainActivity extends Activity {
 				startActivity(mypageIntent);
 			}
 		});
-		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
-		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
 		
-		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
+		//drawerLayout 온오프 버튼(햄버거 버튼)
 		navBarButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//jjy 050704) 네비게이션 메뉴 오픈 및 클로즈 동작
+				//jjy 050704) drawerlayout 오픈 및 클로즈 동작
 				if (mDrawerLayout.isDrawerOpen(Gravity.START))	{
 					mDrawerLayout.closeDrawer(Gravity.START);
 				}
@@ -58,6 +64,8 @@ public class MainActivity extends Activity {
 				//
 			}
 		});
+		
+		//사용자 페이지 버튼
 		main_btn_mypage.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -70,7 +78,7 @@ public class MainActivity extends Activity {
 		});
 		
 		
-		//로긴 엑티비티 띄움
+		//로긴 엑티비티 띄움 (임시)
 		Intent intent=new Intent(MainActivity.this, LoginActivity.class);
 		startActivity(intent);
 	}
