@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 	
 	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
 	ImageView profile_picture; //메뉴 안 프로필 사진
-	boolean menu_toggle=false; //메뉴오픈여부- true=open, false=close
+	//boolean menu_toggle=false; //메뉴오픈여부- true=open, false=close
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +48,12 @@ public class MainActivity extends Activity {
 		navBarButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//danee 050704) 메뉴 버튼을 눌렸을때 메뉴가 열려있는지 여부 판단 후 열거나 닫음
-				if (menu_toggle==false)	{
-					mDrawerLayout.openDrawer(Gravity.START);
-					menu_toggle=true;
+				//jjy 050704) 네비게이션 메뉴 오픈 및 클로즈 동작
+				if (mDrawerLayout.isDrawerOpen(Gravity.START))	{
+					mDrawerLayout.closeDrawer(Gravity.START);
 				}
 				else {
-					mDrawerLayout.closeDrawer(Gravity.START);
-					menu_toggle=false;
+					mDrawerLayout.openDrawer(Gravity.START);
 				}
 				//
 			}
