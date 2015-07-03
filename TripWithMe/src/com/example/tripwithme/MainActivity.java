@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
 		navBarButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//jjy 050704) drawerlayout 오픈 및 클로즈 동작
+				//jjy 050704) drawerLayout 오픈 및 클로즈 동작
 				if (mDrawerLayout.isDrawerOpen(Gravity.START))	{
 					mDrawerLayout.closeDrawer(Gravity.START);
 				}

@@ -3,6 +3,7 @@ package com.example.tripwithme;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.Menu;
@@ -17,7 +18,6 @@ public class ProfileActivity extends Activity {
 	
 	Button profile_btn_next;  //프로필 액티비티의 가장 하단 버튼
 	LinearLayout profile_layout0, profile_layout1, profile_layout2; //0=작성요구창, 1=필수 작성창, 2-선택 작성창
-	boolean menu_toggle=false; //true=open, false=close
 	int profile_layoutNo=0; // 프로필의 작성여부 확인) 0 = 프로필 작성 안됨 , 1 = 필수 프로필 작성 , 2 = 선택 프로필 작성
 
 	@Override
@@ -35,6 +35,10 @@ public class ProfileActivity extends Activity {
 		profile_layout1=(LinearLayout)findViewById(R.id.profile_layout1);
 		profile_layout2=(LinearLayout)findViewById(R.id.profile_layout2);
 		
+		//jjy 050704) drawerLayout에 그림자효과 추가.
+		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+		mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+		
 		//danee 050704) 만약 작성이 안되어있으면 첫 레이아웃 (작성요구) 나머지 레이아웃 숨김
 		if (profile_layoutNo==0){ 
 			profile_layout0.setVisibility(View.VISIBLE);
@@ -48,13 +52,12 @@ public class ProfileActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if (menu_toggle==false)	{
-					mDrawerLayout.openDrawer(Gravity.START);
-					menu_toggle=true;
+				//jjy 050704) drawerLayout 오픈 및 클로즈 동작
+				if (mDrawerLayout.isDrawerOpen(Gravity.START))	{
+					mDrawerLayout.closeDrawer(Gravity.START);
 				}
 				else {
-					mDrawerLayout.closeDrawer(Gravity.START);
-					menu_toggle=false;
+					mDrawerLayout.openDrawer(Gravity.START);
 				}
 				
 			}
