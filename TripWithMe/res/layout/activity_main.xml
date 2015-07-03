@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_weight="3.7"
+        android:layout_weight="4"
         android:background="@color/mainBarBgColor"
         android:orientation="horizontal" >
 
@@ -67,7 +67,7 @@
         android:id="@+id/dl_activity_main_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="12.3"
+        android:layout_weight="12"
         tools:context=".MainActivity" >
 
         <LinearLayout
@@ -76,14 +76,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:weightSum="12.3" >
+            android:weightSum="12" >
 
             <!-- 검색창과 큰 그림 -->
 
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:layout_weight="5.3"
+                android:layout_weight="5"
                 android:background="@drawable/brazil"
                 android:orientation="horizontal" >
 
@@ -91,7 +91,7 @@
 
                 <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="39dp"
+                    android:layout_height="32dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="20dp"
                     android:layout_marginEnd="7dp"
@@ -101,7 +101,7 @@
 
                     <Spinner
                         android:id="@+id/user_sel_spinner"
-                        android:layout_width="80dp"
+                        android:layout_width="86dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="0dp"
                         android:layout_marginLeft="2dp"
@@ -133,7 +133,7 @@
                         android:layout_toEndOf="@id/calender"
                         android:layout_toRightOf="@id/calender"
                         android:hint="@string/search_helper"
-                        android:textSize="14sp" />
+                        android:textSize="12sp" />
 
                     <Button
                         android:id="@+id/main_btn_search"
@@ -198,7 +198,7 @@
 
         <LinearLayout
             android:id="@+id/aaa"
-            android:layout_width="300dp"
+            android:layout_width="160dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="#FFFFFF"
@@ -206,18 +206,18 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="160dp"
                 android:background="#FFFFFF"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:contentDescription="@string/img_view1"
                     android:id="@+id/drawer_picture"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:maxHeight="300dp"
-                    android:maxWidth="300dp"
+                    android:maxHeight="160dp"
+                    android:maxWidth="160dp"
+                    android:adjustViewBounds="true"
                     android:src="@drawable/drawer_picture"
                     />
             </LinearLayout>
@@ -230,16 +230,13 @@
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:contentDescription="@string/img_view1"
                     android:id="@+id/drawer_recommend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_marginBottom="24dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="140dp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/drawer_recommend"
                     />
@@ -253,16 +250,13 @@
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:contentDescription="@string/img_view1"
                     android:id="@+id/drawer_real"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_marginBottom="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="140dp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/drawer_real"
                     />
@@ -276,16 +270,13 @@
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:contentDescription="@string/img_view1"
                     android:id="@+id/drawer_talk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_marginBottom="24dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="140dp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/drawer_talk"
                     />
@@ -299,16 +290,13 @@
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:contentDescription="@string/img_view1"
                     android:id="@+id/drawer_config"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_marginBottom="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="140dp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/drawer_config"
                     />
