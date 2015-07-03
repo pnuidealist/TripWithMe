@@ -212,9 +212,8 @@
 
                 <ImageView
                     android:id="@+id/drawer_picture"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
                     android:maxHeight="160dp"
                     android:maxWidth="160dp"
                     android:adjustViewBounds="true"
@@ -231,12 +230,12 @@
 
                 <ImageView
                     android:id="@+id/drawer_recommend"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:maxHeight="90dp"
-                    android:maxWidth="140dp"
+                    android:maxWidth="160dp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/drawer_recommend"
                     />
@@ -251,12 +250,12 @@
 
                 <ImageView
                     android:id="@+id/drawer_real"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:maxHeight="90dp"
-                    android:maxWidth="140dp"
+                    android:maxWidth="160dp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/drawer_real"
                     />
@@ -271,12 +270,12 @@
 
                 <ImageView
                     android:id="@+id/drawer_talk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:maxHeight="90dp"
-                    android:maxWidth="140dp"
+                    android:maxWidth="160dp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/drawer_talk"
                     />
@@ -291,12 +290,12 @@
 
                 <ImageView
                     android:id="@+id/drawer_config"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:maxHeight="90dp"
-                    android:maxWidth="140dp"
+                    android:maxWidth="160dp"
                     android:adjustViewBounds="true"
                     android:src="@drawable/drawer_config"
                     />
