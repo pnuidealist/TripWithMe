@@ -26,11 +26,13 @@
     <string name="profile_nation">국적</string>
     <string name="profile_language">사용가능 언어</string>
     <string name="profile_picture">사진선택</string>
-    <string name="profile_index3">(1장에서 최대 5장까지 선택 가능합니다.)</string>
+    <string name="profile_index3">(1장에서 최대 3장까지 선택 가능합니다.)</string>
     <string name="profile_index4">(터치하여 대표 사진을 선택할 수 있습니다.)</string>
-    <string name="profile_layout_btn0">프로필 작성</string>
+    <string name="profile_layout_btn0">프로필 작성하기</string>
     <string name="profile_layout_btn1">다음</string>
     <string name="profile_layout_btn2">완료</string>
+    <string name="profile_textView1_layout0">*작성된 프로필이 없습니다.</string>
+    <string name="profile_textView2_layout0">프로필을 작성해야 게시물을 올릴 수 있습니다.</string>
 
     <string name="img_view1">img</string>
 

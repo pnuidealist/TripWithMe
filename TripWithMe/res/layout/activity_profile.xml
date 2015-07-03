@@ -91,7 +91,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical"
-                    android:visibility="gone" >
+                    android:visibility="visible" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -99,7 +99,15 @@
                         android:layout_gravity="end"
                         android:layout_margin="9dp"
                         android:gravity="center"
-                        android:text="프로필 정보 없음" />
+                        android:text="@string/profile_textView1_layout0" 
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="9dp"
+                        android:gravity="center"
+                        android:text="@string/profile_textView2_layout0" />
                 </LinearLayout>
 
                 <LinearLayout
