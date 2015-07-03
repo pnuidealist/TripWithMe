@@ -17,6 +17,7 @@
     <string name="certNo">인증번호</string>
     
     <string name="title_activity_profile">ProfileActivity</string>
+
     <string name="profile_index0">*필수 입력정보 입니다.</string>
     <string name="profile_index1">프로필 작</string>
     <string name="profile_index2">정확하게 입력하실수록 선택될 확률이 높습니다!</string>
@@ -30,5 +31,8 @@
     <string name="profile_toggle0">프로필 작성</string>
     <string name="profile_toggle1">다음</string>
     <string name="profile_toggle2">완료</string>
+
+    <string name="img_view1">img</string>
+
 
 </resources>
