@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
 	
 	private Button navBarButton;
 	private DrawerLayout mDrawerLayout;
+	Button main_btn_mypage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends Activity {
 		actionBar.hide();
 		
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
+		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
 		navBarButton.setOnClickListener(new View.OnClickListener() {
 			
@@ -34,6 +36,16 @@ public class MainActivity extends Activity {
 				mDrawerLayout.openDrawer(Gravity.START);
 			}
 		});
+		main_btn_mypage.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent mypageIntent=new Intent(MainActivity.this, ProfileActivity.class);
+				startActivity(mypageIntent);
+			}
+		});
+		
 		
 		//로긴 엑티비티 띄움
 		Intent intent=new Intent(MainActivity.this, LoginActivity.class);
