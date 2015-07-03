@@ -28,9 +28,9 @@
     <string name="profile_picture">사진선택</string>
     <string name="profile_index3">(1장에서 최대 5장까지 선택 가능합니다.)</string>
     <string name="profile_index4">(터치하여 대표 사진을 선택할 수 있습니다.)</string>
-    <string name="profile_toggle0">프로필 작성</string>
-    <string name="profile_toggle1">다음</string>
-    <string name="profile_toggle2">완료</string>
+    <string name="profile_layout_btn0">프로필 작성</string>
+    <string name="profile_layout_btn1">다음</string>
+    <string name="profile_layout_btn2">완료</string>
 
     <string name="img_view1">img</string>
 

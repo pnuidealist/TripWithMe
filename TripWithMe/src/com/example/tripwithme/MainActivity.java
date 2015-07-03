@@ -18,14 +18,16 @@ public class MainActivity extends Activity {
 	
 	private Button navBarButton;
 	private DrawerLayout mDrawerLayout;
-	Button main_btn_mypage;
-	ImageView profile_picture;
-	boolean menu_toggle=false; //true=open, false=close
+	
+	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
+	ImageView profile_picture; //메뉴 안 프로필 사진
+	boolean menu_toggle=false; //메뉴오픈여부- true=open, false=close
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		//액션바 숨김
 		ActionBar actionBar = getActionBar();
 		actionBar.hide();
 		
@@ -41,11 +43,12 @@ public class MainActivity extends Activity {
 		});
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
 		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
+		
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
 		navBarButton.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
+				//danee 050704) 메뉴 버튼을 눌렸을때 메뉴가 열려있는지 여부 판단 후 열거나 닫음
 				if (menu_toggle==false)	{
 					mDrawerLayout.openDrawer(Gravity.START);
 					menu_toggle=true;
@@ -54,6 +57,7 @@ public class MainActivity extends Activity {
 					mDrawerLayout.closeDrawer(Gravity.START);
 					menu_toggle=false;
 				}
+				//
 			}
 		});
 		main_btn_mypage.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +65,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				//danee 050704) 프로필 액티비티 띄움
 				Intent mypageIntent=new Intent(MainActivity.this, ProfileActivity.class);
 				startActivity(mypageIntent);
 			}
