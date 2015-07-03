@@ -16,5 +16,6 @@
     <string name="samplePhone">+82)010-1234-5678</string>
     <string name="certNo">인증번호</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="img_view1">img</string>
 
 </resources>
