@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="16" >
+    
+    <!-- 메뉴표시줄 -->
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_weight="3.7"
+        android:background="@color/mainBarBgColor"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/main_btn_popup_menu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/main_btn_popup_menu" />
+
+        <Button
+            android:id="@+id/main_btn_logo"
+            android:layout_width="150dp"
+            android:layout_height="18dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/main_btn_logo"
+            android:scaleType="centerCrop" />
+
+        <Button
+            android:id="@+id/main_btn_mypage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/main_btn_mypage" />
+
+        <Button
+            android:id="@+id/main_btn_write_contents"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/main_btn_mypage"
+            android:layout_toStartOf="@id/main_btn_mypage"
+            android:background="@drawable/main_btn_write_contents" />
+    </RelativeLayout>
+    
+    <!-- 메뉴표시줄 아래 전체 뷰_드로워레이아웃 -->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/dl_activity_main_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="12"
+        tools:context=".MainActivity" >
+        
+        <!-- 주요 뷰 -->
+        <ListView
+        android:id="@+id/travelerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        
+        <!-- 드러워 -->
+        <LinearLayout
+            android:id="@+id/aaa"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#FFFFFF"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/drawer_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="160dp"
+                    android:maxWidth="160dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/drawer_picture"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="start"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/drawer_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:maxHeight="70dp"
+                    android:maxWidth="160dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/drawer_recommend"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="start"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/drawer_real"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:maxHeight="70dp"
+                    android:maxWidth="160dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/drawer_real"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="start"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/drawer_talk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:maxHeight="70dp"
+                    android:maxWidth="160dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/drawer_talk"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="start"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/drawer_config"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:maxHeight="70dp"
+                    android:maxWidth="160dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/drawer_config"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        
+    </android.support.v4.widget.DrawerLayout>
+    
+    
+    
+    
+
+</LinearLayout>

@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
 	
 	private Button navBarButton;
 	private DrawerLayout mDrawerLayout;
+	private Button searchBtn;
 	
 	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
 	ImageView profile_picture; //메뉴 안 프로필 사진
@@ -34,11 +35,21 @@ public class MainActivity extends Activity {
 		profile_picture=(ImageView)findViewById(R.id.drawer_picture);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
 		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
+		searchBtn = (Button)findViewById(R.id.main_btn_search);
 		
 		//jjy 050704) drawerlayout 그림자 추가
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 		mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
+		
+		//jjy 050705) 검색 버튼
+		searchBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent mypageIntent=new Intent(MainActivity.this, TravelerListActivity.class);
+				startActivity(mypageIntent);
+			}
+		});
 		
 		//프로필 사진 버튼
 		profile_picture.setOnClickListener(new View.OnClickListener() {

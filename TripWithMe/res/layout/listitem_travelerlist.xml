@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@drawable/profilelist_bkgnd" >
+
+    <!-- 윗 줄 좌측 사진 우측 상세 정보 -->
+
+    <TableRow>
+
+        <LinearLayout
+            android:id="@+id/travelerList_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/profilelist_photo1"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <ImageView
+                android:id="@+id/travelerList_photo_bkgnd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:src="@drawable/profilelist_photo_bkgnd" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp" >
+                
+                
+                
+            </TableLayout>
+        </LinearLayout>
+    </TableRow>
+
+    <!-- 아래 줄 좌측 날짜 우측 하트 -->
+
+    <TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <TextView
+                android:id="@+id/traveler_listitem_period"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:text="@string/listItem_period"
+                android:textColor="#ffffff"
+                android:textColorHighlight="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </TableRow>
+
+</TableLayout>
