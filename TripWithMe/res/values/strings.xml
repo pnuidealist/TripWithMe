@@ -26,8 +26,10 @@
     <string name="profile_index0">*필수 입력정보 입니다.</string>
     <string name="profile_index1">프로필 작</string>
     <string name="profile_index2">정확하게 입력하실수록 선택될 확률이 높습니다!</string>
-    <string name="profile_name">이</string>
+    <string name="profile_name">이름</string>
     <string name="profile_sex">성별</string>
+    <string name="profile_male">남</string>
+    <string name="profile_female">여</string>
     <string name="profile_nation">국적</string>
     <string name="profile_language">사용가능 언어</string>
     <string name="profile_picture">사진선택</string>
