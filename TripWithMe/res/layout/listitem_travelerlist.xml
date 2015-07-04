@@ -9,22 +9,27 @@
     <TableRow>
 
         <LinearLayout
-            android:id="@+id/travelerList_photo"
             android:layout_width="fill_parent"
             android:layout_height="90dp"
-            android:background="@drawable/profilelist_photo1"
             android:orientation="horizontal"
             android:weightSum="4" >
 
-            <ImageView
-                android:id="@+id/travelerList_photo_bkgnd"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:src="@drawable/profilelist_photo_bkgnd" />
-
+            <FrameLayout 
+                android:id="@+id/travelerList_photo"
+                android:layout_width="100dp"
+            	android:layout_height="90dp"
+                android:background="@drawable/profilelist_photo1"
+                >
+	            <ImageView
+	                android:id="@+id/travelerList_photo_bkgnd"
+	                android:layout_width="100dp"
+	                android:layout_height="90dp"
+	                android:adjustViewBounds="true"
+	                android:maxHeight="90dp"
+	                android:maxWidth="90dp"
+	                android:src="@drawable/profilelist_photo_bkgnd" />
+			</FrameLayout>
+	            
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp" >

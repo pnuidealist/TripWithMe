@@ -8,13 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+//150705 jjy)
 public class TravelerListAdapter extends BaseAdapter {
 	private class ViewHolder {
-	    public LinearLayout photo;
+	    public FrameLayout photo;
 	    public ImageView photoBckgnd;
 	    public TextView period;
 	}
@@ -49,8 +51,9 @@ public class TravelerListAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	        convertView = inflater.inflate(R.layout.listitem_travelerlist, null);
-	 
-	        holder.photo = (LinearLayout) convertView.findViewById(R.id.travelerList_photo);
+	        
+	        
+	        holder.photo = (FrameLayout) convertView.findViewById(R.id.travelerList_photo);
 	        holder.photoBckgnd = (ImageView) convertView.findViewById(R.id.travelerList_photo_bkgnd);
 	        holder.period = (TextView) convertView.findViewById(R.id.traveler_listitem_period);
 	        
@@ -73,6 +76,8 @@ public class TravelerListAdapter extends BaseAdapter {
 	    }
 	 
 	    holder.period.setText(mData.period);
+	    
+	    convertView.setMinimumHeight(holder.photoBckgnd.getHeight()+holder.period.getHeight());
 		
 		
 		return convertView;

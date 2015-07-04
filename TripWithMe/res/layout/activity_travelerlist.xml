@@ -5,9 +5,9 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:weightSum="16" >
-    
+
     <!-- 메뉴표시줄 -->
-    
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
@@ -26,17 +26,37 @@
             android:layout_marginTop="7dp"
             android:background="@drawable/main_btn_popup_menu" />
 
-        <Button
-            android:id="@+id/main_btn_logo"
-            android:layout_width="150dp"
-            android:layout_height="18dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/main_btn_logo"
-            android:scaleType="centerCrop" />
-
+        <RelativeLayout
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginStart="10dp"
+	            android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/main_btn_popup_menu"
+	    android:layout_toEndOf="@id/main_btn_popup_menu"
+        android:background="@drawable/profilelist_editbox_search"
+        android:orientation="horizontal" >
+	        <EditText
+	            android:id="@+id/traveler_list_searchEditText"
+	            android:layout_width="180dp"
+	            android:layout_height="fill_parent"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="2dp"
+	            android:layout_marginStart="2dp"
+	            
+	            android:textSize="11sp" 
+	            />
+	
+	        <Button
+	            android:id="@+id/main_btn_search"
+	            android:layout_width="20dp"
+	            android:layout_height="20dp"
+	            android:layout_centerVertical="true"
+	            android:layout_toRightOf="@id/traveler_list_searchEditText"
+	            android:layout_toEndOf="@id/traveler_list_searchEditText"
+	            android:background="@drawable/main_btn_search" />
+		</RelativeLayout>
         <Button
             android:id="@+id/main_btn_mypage"
             android:layout_width="20dp"
@@ -63,22 +83,25 @@
             android:layout_toStartOf="@id/main_btn_mypage"
             android:background="@drawable/main_btn_write_contents" />
     </RelativeLayout>
-    
+
     <!-- 메뉴표시줄 아래 전체 뷰_드로워레이아웃 -->
+
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/dl_activity_main_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="12"
         tools:context=".MainActivity" >
-        
+
         <!-- 주요 뷰 -->
+
         <ListView
-        android:id="@+id/travelerList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-        
+            android:id="@+id/travelerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
         <!-- 드러워 -->
+
         <LinearLayout
             android:id="@+id/aaa"
             android:layout_width="160dp"
@@ -97,11 +120,10 @@
                     android:id="@+id/drawer_picture"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
                     android:maxHeight="160dp"
                     android:maxWidth="160dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/drawer_picture"
-                    />
+                    android:src="@drawable/drawer_picture" />
             </LinearLayout>
 
             <RelativeLayout
@@ -117,11 +139,10 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
+                    android:adjustViewBounds="true"
                     android:maxHeight="70dp"
                     android:maxWidth="160dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/drawer_recommend"
-                    />
+                    android:src="@drawable/drawer_recommend" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -137,11 +158,10 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
+                    android:adjustViewBounds="true"
                     android:maxHeight="70dp"
                     android:maxWidth="160dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/drawer_real"
-                    />
+                    android:src="@drawable/drawer_real" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -157,11 +177,10 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
+                    android:adjustViewBounds="true"
                     android:maxHeight="70dp"
                     android:maxWidth="160dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/drawer_talk"
-                    />
+                    android:src="@drawable/drawer_talk" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -177,18 +196,12 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
+                    android:adjustViewBounds="true"
                     android:maxHeight="70dp"
                     android:maxWidth="160dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/drawer_config"
-                    />
+                    android:src="@drawable/drawer_config" />
             </RelativeLayout>
         </LinearLayout>
-        
     </android.support.v4.widget.DrawerLayout>
-    
-    
-    
-    
 
 </LinearLayout>
