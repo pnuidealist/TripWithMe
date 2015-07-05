@@ -74,6 +74,10 @@ public class MainActivity extends Activity {
 					wallpaperTurn++;
 					break;	
 				case 3:
+					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.yeun2));
+					wallpaperTurn++;
+					break;	
+				case 4:
 					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.sunghoon));
 					wallpaperTurn = 0;
 					break;
