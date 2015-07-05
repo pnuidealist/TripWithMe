@@ -14,12 +14,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class MainActivity extends Activity {
 	
 	private Button navBarButton;
-	private DrawerLayout mDrawerLayout;
 	private Button searchBtn;
+	private DrawerLayout mDrawerLayout;
+	private LinearLayout backgroundLayout;
 	
 	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
 	ImageView profile_picture; //메뉴 안 프로필 사진
@@ -40,6 +42,7 @@ public class MainActivity extends Activity {
 		//jjy 050704) drawerlayout 그림자 추가
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 		mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+		backgroundLayout=(LinearLayout)findViewById(R.id.main_layout_background);
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
 		
 		//jjy 050705) 검색 버튼
