@@ -1,66 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
-    android:background="@drawable/profilelist_bkgnd" >
+    android:layout_height="110dp" >
 
-    <!-- 윗 줄 좌측 사진 우측 상세 정보 -->
+    <!-- listView background image for each item -->
+    <ImageView
+        android:id="@+id/travelerList_bkgnd"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"
+        android:maxHeight="110dp"
+        android:src="@drawable/profilelist_bkgnd" />
 
-    <TableRow>
+    <!-- align each item with the tableLayout -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp" >
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="90dp"
-            android:orientation="horizontal"
-            android:weightSum="4" >
+        <!-- 윗 줄 좌측 사진 우측 상세 정보 -->
 
-            <FrameLayout 
-                android:id="@+id/travelerList_photo"
-                android:layout_width="100dp"
-            	android:layout_height="90dp"
-                android:background="@drawable/profilelist_photo1"
-                >
-	            <ImageView
-	                android:id="@+id/travelerList_photo_bkgnd"
-	                android:layout_width="100dp"
-	                android:layout_height="90dp"
-	                android:adjustViewBounds="true"
-	                android:maxHeight="90dp"
-	                android:maxWidth="90dp"
-	                android:src="@drawable/profilelist_photo_bkgnd" />
-			</FrameLayout>
-	            
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="90dp" >
-                
-                
-                
-            </TableLayout>
-        </LinearLayout>
-    </TableRow>
+        <TableRow>
 
-    <!-- 아래 줄 좌측 날짜 우측 하트 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:weightSum="4" >
 
-    <TableRow>
+                <FrameLayout
+                    android:id="@+id/travelerList_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/profilelist_photo1" >
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:orientation="horizontal"
-            android:weightSum="4" >
+                    <ImageView
+                        android:id="@+id/travelerList_photo_bkgnd"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="90dp"
+                        android:maxWidth="90dp"
+                        android:src="@drawable/profilelist_photo_bkgnd" />
+                </FrameLayout>
 
-            <TextView
-                android:id="@+id/traveler_listitem_period"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#000000"
-                android:text="@string/listItem_period"
-                android:textColor="#ffffff"
-                android:textColorHighlight="#000000"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </TableRow>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp" >
+                </TableLayout>
+            </LinearLayout>
+        </TableRow>
 
-</TableLayout>
+        <!-- 아래 줄 좌측 날짜 우측 하트 -->
+
+        <TableRow>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+
+                <TextView
+                    android:id="@+id/traveler_listitem_period"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:text="@string/listItem_period"
+                    android:textColor="#ffffff"
+                    android:textColorHighlight="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</FrameLayout>

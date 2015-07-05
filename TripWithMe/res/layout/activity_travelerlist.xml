@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_weight="3.7"
+        android:layout_weight="4"
         android:background="@color/mainBarBgColor"
         android:orientation="horizontal" >
 
@@ -27,36 +27,36 @@
             android:background="@drawable/main_btn_popup_menu" />
 
         <RelativeLayout
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-	            android:layout_marginLeft="10dp"
-	            android:layout_marginStart="10dp"
-	            android:layout_marginTop="4dp"
-        android:layout_toRightOf="@id/main_btn_popup_menu"
-	    android:layout_toEndOf="@id/main_btn_popup_menu"
-        android:background="@drawable/profilelist_editbox_search"
-        android:orientation="horizontal" >
-	        <EditText
-	            android:id="@+id/traveler_list_searchEditText"
-	            android:layout_width="180dp"
-	            android:layout_height="fill_parent"
-	            android:layout_centerVertical="true"
-	            android:layout_marginLeft="2dp"
-	            android:layout_marginStart="2dp"
-	            
-	            android:textSize="11sp" 
-	            />
-	
-	        <Button
-	            android:id="@+id/main_btn_search"
-	            android:layout_width="20dp"
-	            android:layout_height="20dp"
-	            android:layout_centerVertical="true"
-	            android:layout_toRightOf="@id/traveler_list_searchEditText"
-	            android:layout_toEndOf="@id/traveler_list_searchEditText"
-	            android:background="@drawable/main_btn_search" />
-		</RelativeLayout>
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/main_btn_popup_menu"
+            android:layout_toRightOf="@id/main_btn_popup_menu"
+            android:background="@drawable/profilelist_editbox_search"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/traveler_list_searchEditText"
+                android:layout_width="180dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/main_btn_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/traveler_list_searchEditText"
+                android:layout_toRightOf="@id/traveler_list_searchEditText"
+                android:background="@drawable/main_btn_search" />
+        </RelativeLayout>
+
         <Button
             android:id="@+id/main_btn_mypage"
             android:layout_width="20dp"
