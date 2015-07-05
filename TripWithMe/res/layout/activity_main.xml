@@ -82,6 +82,7 @@
             <!-- 검색창과 큰 그림 -->
 
             <RelativeLayout
+                android:id="@+id/main_layout_wallpaper"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="5"

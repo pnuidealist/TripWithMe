@@ -1,11 +1,16 @@
 package com.example.tripwithme;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import com.example.tripwithme.R;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
@@ -15,13 +20,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends Activity {
 	
 	private Button navBarButton;
 	private Button searchBtn;
 	private DrawerLayout mDrawerLayout;
+	private RelativeLayout wallpaper;
 	private LinearLayout backgroundLayout;
+	private TimerTask timerTask;
+    private Timer timer;
+    private int wallpaperTurn = 0;
+    private static Handler handler;
 	
 	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
 	ImageView profile_picture; //메뉴 안 프로필 사진
@@ -43,7 +54,38 @@ public class MainActivity extends Activity {
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 		mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
 		backgroundLayout=(LinearLayout)findViewById(R.id.main_layout_background);
+		wallpaper=(RelativeLayout)findViewById(R.id.main_layout_wallpaper);
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
+		
+		//jjy 050705) 배경화면 바뀌는 효과 추가
+		handler = new Handler(){
+			public void handleMessage(Message msg){
+				switch(wallpaperTurn){
+				case 0:
+					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.brazil));
+					wallpaperTurn++;
+					break;
+				case 1:
+					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.canada));
+					wallpaperTurn++;
+					break;
+				case 2:
+					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.sunghoon));
+					wallpaperTurn = 0;
+					break;
+				}
+			}
+		};
+		//jjy 050705) 배경화면이 2초 마다 바뀜
+		timerTask = new TimerTask(){
+			@Override
+			public void run() {
+				handler.sendEmptyMessage(1);
+			}
+			
+		};
+		timer = new Timer();
+		timer.schedule(timerTask, 500, 2000);
 		
 		//jjy 050705) 검색 버튼
 		searchBtn.setOnClickListener(new View.OnClickListener() {
