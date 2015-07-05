@@ -98,7 +98,8 @@
         <ListView
             android:id="@+id/travelerList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" 
+            android:background="#999999"/>
 
         <!-- 드러워 -->
 

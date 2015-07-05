@@ -70,13 +70,13 @@ public class TravelerListActivity extends Activity {
 
 		// 리스트뷰 목록 추가
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo1),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "111~11");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "111~11","이름","국적","언어","관광지","5");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo2),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "222~22");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "222~22","이름","국적","언어","관광지","5");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo3),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "333~33");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "333~33","이름","국적","언어","관광지","5");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo4),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "444~44");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "444~44","이름","국적","언어","관광지","5");
 	}
 
 	@Override
