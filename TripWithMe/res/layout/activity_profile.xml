@@ -110,7 +110,7 @@
                         android:text="@string/profile_textView2_layout0" />
                 </LinearLayout>
 
-                <!-- d -->
+                <!-- 필수입력 -->
 
                 <LinearLayout
                     android:id="@+id/profile_layout1"
@@ -118,7 +118,7 @@
                     android:layout_height="fill_parent"
                     android:orientation="vertical"
                     android:padding="10dp"
-                    android:visibility="visible" >
+                    android:visibility="gone" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -326,53 +326,323 @@
                             android:text="@string/profile_index3" />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="3dp"
-                            android:gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="20dp"
+                            
+                            android:gravity="bottom"
                             android:orientation="horizontal" >
 
                             <ImageView
-                                android:layout_width="125dp"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="6dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
                                 android:src="@drawable/profile_picture" />
 
                             <ImageView
-                                android:layout_width="110dp"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_weight="0.9"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
                                 android:src="@drawable/profile_picture_main" />
 
                             <Button
                                 android:id="@+id/profile_btn_pPlus"
-                                android:layout_width="42dp"
-                                android:layout_height="28dp"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="43dp"
                                 android:layout_marginLeft="10dp"
+                                android:layout_marginRight="30dp"
                                 android:background="@drawable/profile_picture_plus" />
                         </LinearLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="3dp"
                             android:text="@string/profile_index4" />
                     </LinearLayout>
-                </LinearLayout> <!-- profile_layout1 -->
+                </LinearLayout> <!-- 필수입력 레이아웃 -->
+                <!-- 선택입력 레이아웃 -->
 
                 <LinearLayout
                     android:id="@+id/profile_layout2"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical"
-                    android:visibility="gone" >
+                    android:padding="10dp"
+                    android:visibility="visible" >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_margin="9dp"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="9dp"
                         android:gravity="center"
-                        android:text="if you want" />
+                        android:text="@string/profile_index5" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:text="@string/profile_index6"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:text="@string/profile_index7"
+                        android:textSize="13sp" />
+                    <!-- 나이 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/profile_dot" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/profile_age" />
+
+                        <EditText
+                            android:id="@+id/profile_et_age"
+                            android:layout_width="210dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="13dp"
+                            android:background="@drawable/profile_input"
+                            android:paddingLeft="5dp" />
+                    </LinearLayout>
+                    <!-- 이메일 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/profile_dot" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/profile_email" />
+
+                        <EditText
+                            android:id="@+id/profile_et_email"
+                            android:layout_width="210dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/profile_input"
+                            android:paddingLeft="5dp" />
+                    </LinearLayout>
+                    <!-- 좋아하는 음식 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/profile_dot" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/profile_food" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/profile_et_food"
+                                android:layout_width="210dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/profile_input"
+                                android:paddingLeft="5dp" />
+
+                            <Button
+                                android:id="@+id/profile_btn_fPlus"
+                                android:layout_width="42dp"
+                                android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/profile_lang_plus" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- 여행해본 곳 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/profile_dot" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/profile_travle" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/profile_et_travle"
+                                android:layout_width="210dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/profile_input"
+                                android:paddingLeft="5dp" />
+
+                            <Button
+                                android:id="@+id/profile_btn_tPlus"
+                                android:layout_width="42dp"
+                                android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/profile_lang_plus" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- 관심사 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/profile_dot" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/profile_like" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/profile_et_like"
+                                android:layout_width="210dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/profile_input"
+                                android:paddingLeft="5dp" />
+
+                            <Button
+                                android:id="@+id/profile_btn_liPlus"
+                                android:layout_width="42dp"
+                                android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/profile_lang_plus" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- 취미 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/profile_dot" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/profile_hobby" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/profile_et_hobby"
+                                android:layout_width="210dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/profile_input"
+                                android:paddingLeft="5dp" />
+
+                            <Button
+                                android:id="@+id/profile_btn_hPlus"
+                                android:layout_width="42dp"
+                                android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/profile_lang_plus" />
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
