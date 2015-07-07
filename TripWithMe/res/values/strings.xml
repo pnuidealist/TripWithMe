@@ -24,7 +24,7 @@
     <!-- for profile writting -->
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="profile_index0">*필수 입력정보 입니다.</string>
-    <string name="profile_index1">프로필 작</string>
+    <string name="profile_index1">프로필 작성</string>
     <string name="profile_index2">정확하게 입력하실수록 선택될 확률이 높습니다!</string>
     <string name="profile_name">이름</string>
     <string name="profile_sex">성별</string>
@@ -40,6 +40,15 @@
     <string name="profile_layout_btn2">완료</string>
     <string name="profile_textView1_layout0">*작성된 프로필이 없습니다.</string>
     <string name="profile_textView2_layout0">프로필을 작성해야 게시물을 올릴 수 있습니다.</string>
+    <string name="profile_index5">*선택 입력정보 입니다.</string>
+    <string name="profile_index6">항목 1개당 하트 1개를 드립니다.</string>
+    <string name="profile_index7">(하트는 상대방이 나를 선택할 때 큰 기준이 됩니다.)</string>
+    <string name="profile_age">나이 </string>
+    <string name="profile_email">이메일</string>
+    <string name="profile_food">좋아하는 음식</string>
+    <string name="profile_travle">여행해본 곳</string>
+    <string name="profile_like">관심사</string>
+    <string name="profile_hobby">취미</string>
     <string name="img_view1">img</string>
 	
 	<!-- needed for travelerlist -->

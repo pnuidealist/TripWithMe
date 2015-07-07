@@ -28,41 +28,28 @@
             android:layout_marginTop="35dp"
             android:orientation="vertical" >
 
-            <LinearLayout
-                android:id="@+id/linearLayout1"
+            <EditText
+                android:id="@+id/editText1"
+                android:paddingLeft="7dp"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
                 android:background="@drawable/login_editbox"
-                android:orientation="horizontal" >
+                android:ems="10"
+                android:hint="@string/samplePhone"
+                android:textSize="6.5pt" />
 
-                <EditText
-                    android:id="@+id/editText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:textSize="6.5pt"
-                    android:ems="10"
-                    android:hint="@string/samplePhone" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
+            <EditText
+                android:id="@+id/editText2"
+                android:paddingLeft="7dp"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_gravity="center_vertical|center_horizontal"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/login_editbox" >
-
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="6.5pt"
-                    android:hint="@string/certNo" />
-            </LinearLayout>
+                android:layout_weight="1"
+                android:background="@drawable/login_editbox"
+                android:hint="@string/certNo"
+                android:textSize="6.5pt" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -77,8 +64,8 @@
                     android:layout_height="30dp"
                     android:layout_weight="1"
                     android:background="@drawable/login_btn_ok2"
-                    android:textSize="6.5pt"
-                    android:text="@string/resend" />
+                    android:text="@string/resend"
+                    android:textSize="6.5pt" />
 
                 <Button
                     android:id="@+id/okBtn"
@@ -87,8 +74,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/login_btn_ok2"
-                    android:textSize="6.5pt"
-                    android:text="@string/okBtn" />
+                    android:text="@string/okBtn"
+                    android:textSize="6.5pt" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
