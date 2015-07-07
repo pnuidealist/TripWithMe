@@ -103,7 +103,7 @@
 
                     <Spinner
                         android:id="@+id/user_sel_spinner"
-                        android:layout_width="86dp"
+                        android:layout_width="100dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="0dp"
                         android:layout_marginLeft="2dp"
@@ -125,7 +125,7 @@
 
                     <EditText
                         android:id="@+id/searchText"
-                        android:layout_width="400dp"
+                        android:layout_width="120dp"
                         android:layout_height="fill_parent"
                         android:layout_centerVertical="true"
                         android:layout_marginBottom="0.5dp"
