@@ -50,9 +50,10 @@ public class MainActivity extends Activity {
 		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
 		searchBtn = (Button)findViewById(R.id.main_btn_search);
 		
-		//jjy 050704) drawerlayout 그림자 추가
+		//jjy 050704) drawerlayout 그림자 추가 
+		//jjy 050707) 그림자 제거하고 어두워지게
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-		mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+		//mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
 		backgroundLayout=(LinearLayout)findViewById(R.id.main_layout_background);
 		wallpaper=(RelativeLayout)findViewById(R.id.main_layout_wallpaper);
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
@@ -66,19 +67,19 @@ public class MainActivity extends Activity {
 					wallpaperTurn++;
 					break;
 				case 1:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.canada));
+					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.wall1));
 					wallpaperTurn++;
 					break;
 				case 2:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.yeun));
+					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.wall2));
 					wallpaperTurn++;
 					break;	
 				case 3:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.yeun2));
+					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.wall3));
 					wallpaperTurn++;
 					break;	
 				case 4:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.sunghoon));
+					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.wall4));
 					wallpaperTurn = 0;
 					break;
 				}
@@ -93,7 +94,7 @@ public class MainActivity extends Activity {
 			
 		};
 		timer = new Timer();
-		timer.schedule(timerTask, 500, 2000);
+		timer.schedule(timerTask, 3000, 3000);
 		
 		//jjy 050705) 검색 버튼
 		searchBtn.setOnClickListener(new View.OnClickListener() {

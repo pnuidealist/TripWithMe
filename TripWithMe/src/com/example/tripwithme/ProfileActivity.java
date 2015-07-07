@@ -36,8 +36,9 @@ public class ProfileActivity extends Activity {
 		profile_layout2=(LinearLayout)findViewById(R.id.profile_layout2);
 		
 		//jjy 050704) drawerLayout에 그림자효과 추가.
+		//jjy 050707) 그림자 제거하고 어두워지게
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-		mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+		//mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
 		
 		//danee 050704) 만약 작성이 안되어있으면 첫 레이아웃 (작성요구) 나머지 레이아웃 숨김
 		if (profile_layoutNo==0){ 

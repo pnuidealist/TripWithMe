@@ -31,8 +31,9 @@ public class TravelerListActivity extends Activity {
 		getActionBar().hide();
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
+		//jjy 050707) 그림자 제거하고 어두워짐
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-		mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
+		//mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
 		navBarButton = (Button) findViewById(R.id.main_btn_popup_menu);
 		navBarButton.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -70,13 +71,13 @@ public class TravelerListActivity extends Activity {
 
 		// 리스트뷰 목록 추가
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo1),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "111~11","이름","국적","언어","관광지","5");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.1~3","제시카 알바","국적: 미국","사용가능 언어: 한국어, 영어","여행지: 남포동, 해운대","26");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo2),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "222~22","이름","국적","언어","관광지","5");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.2~5","스칼렛 요한슨","국적: 미국","사용가능 언어: 한국어, 영어","여행지: 부산대, 서면, 광안리","56");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo3),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "333~33","이름","국적","언어","관광지","5");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.1~5","로버트 다우니 주니어","국적: 미국","언어: 한국어, 영어, 중국어","여행지: 태종대, 서면","5");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo4),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "444~44","이름","국적","언어","관광지","5");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.2~3","장동건","국적: 한국","사용가능 언어: 한국어, 중국어","여행지: 해운대","159");
 	}
 
 	@Override
