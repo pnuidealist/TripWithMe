@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 //150705 jjy)
 public class TravelerListAdapter extends BaseAdapter {
+	//holder는 객체화된 리스트 항목의 뷰의 아이템들을 링크하기 위함.
 	private class ViewHolder {
 		public FrameLayout photo;
 		public ImageView photoBckgnd;
@@ -51,6 +52,9 @@ public class TravelerListAdapter extends BaseAdapter {
 	}
 
 	@Override
+	//position: getView는 리스트 항목 수 만큼 호출되며 각 항목 마다 position 값이 있다.
+	//convertView에 리스트 항목으로 표시될 뷰를 객체화 시켜서 넣어야 함.
+	//convertView의 setTag(holder) 를 호출하여 holder를 통해서 리스트의 각 항목 아이템들에 접근할 수 있게 된다.
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
 		if (convertView == null) {
