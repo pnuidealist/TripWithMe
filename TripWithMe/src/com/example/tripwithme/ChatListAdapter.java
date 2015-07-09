@@ -15,6 +15,7 @@ public class ChatListAdapter extends BaseAdapter{
 	private class ViewHolder{
 		public ImageView photo;
 		public TextView txtView;
+		public Boolean isLeft;
 	}
 	private ViewHolder holder;
 	private Context context = null;
@@ -45,7 +46,8 @@ public class ChatListAdapter extends BaseAdapter{
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		ChatListModel listModel = list.get(position);
-		if (convertView == null){
+		if (true){
+		//if (convertView == null){
 			holder = new ViewHolder();
 			//in case that current row is a content to be shown on the left of the listview
 			if(listModel.isLeft){
@@ -62,8 +64,8 @@ public class ChatListAdapter extends BaseAdapter{
 			}
 			convertView.setTag(holder);
 		}
-		else
-			holder = (ViewHolder)convertView.getTag();
+//		else
+//			holder = (ViewHolder)convertView.getTag();
 		holder.txtView.setText(listModel.talk);
 		holder.photo.setImageDrawable(listModel.photo);
 		return convertView;
