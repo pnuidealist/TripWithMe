@@ -45,7 +45,6 @@ public class ChatListAdapter extends BaseAdapter{
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		ChatListModel listModel = list.get(position);
-		
 		if (convertView == null){
 			holder = new ViewHolder();
 			//in case that current row is a content to be shown on the left of the listview
@@ -75,6 +74,7 @@ public class ChatListAdapter extends BaseAdapter{
 		newItem.isLeft = isLeft;
 		newItem.talk = text;
 		list.add(newItem);
+		notifyDataSetChanged();
 	}
 
 }

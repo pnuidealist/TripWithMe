@@ -32,6 +32,7 @@ public class TravelerDetails extends Activity {
 			public void onClick(View v) {
 				Intent intent=new Intent(TravelerDetails.this, ChatActivity.class);
 				startActivity(intent);
+				finish();
 			}
 		});
 		
