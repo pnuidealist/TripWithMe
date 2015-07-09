@@ -38,6 +38,10 @@
             android:name=".ChatActivity"
             android:label="@string/title_activity_Chat" >
         </activity>
+        <activity    
+            android:name=".TravelerDetails"
+            android:label="@string/title_activity_traveler_details" >
+        </activity>
     </application>
 
 </manifest>
