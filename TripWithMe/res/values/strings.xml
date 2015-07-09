@@ -10,17 +10,17 @@
     <!-- for main activity spinner items -->
     <string name="list_item_01">traveler</string>
     <string name="list_item_02">helper</string>
-    
+
     <!-- for main activity searchbar -->
     <string name="search_helper">도시, 랜드마크, 키워드로 검색하세요</string>
-    
+
     <!-- for login activity -->
     <string name="title_activity_login">LoginActivity</string>
     <string name="resend">재발송</string>
     <string name="okBtn">확인</string>
     <string name="samplePhone">+82)010-1234-5678</string>
     <string name="certNo">인증번호</string>
-    
+
     <!-- for profile writting -->
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="profile_index0">*필수 입력정보 입니다.</string>
@@ -50,14 +50,15 @@
     <string name="profile_like">관심사</string>
     <string name="profile_hobby">취미</string>
     <string name="img_view1">img</string>
-	
-	<!-- needed for travelerlist -->
-	<string name="title_activity_TravelerList">TravelerListActivity</string>
-	<string name="listItem_period">1234</string>
-	<string name="listItem_love">1234</string>
-	<string name="listItem_name">a human</string>
-	<string name="listItem_nationality">nationality</string>
-	<string name="listItem_language">language</string>
-	<string name="listItem_attraction">attraction</string>
+
+    <!-- needed for travelerlist -->
+    <string name="title_activity_TravelerList">TravelerListActivity</string>
+    <string name="listItem_period">1234</string>
+    <string name="listItem_love">1234</string>
+    <string name="listItem_name">a human</string>
+    <string name="listItem_nationality">nationality</string>
+    <string name="listItem_language">language</string>
+    <string name="listItem_attraction">attraction</string>
+    <string name="title_activity_traveler_details">TravelerDetails</string>
 
 </resources>

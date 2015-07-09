@@ -9,6 +9,8 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -78,7 +80,26 @@ public class TravelerListActivity extends Activity {
 				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.1~5","로버트 다우니 주니어","국적: 미국","언어: 한국어, 영어, 중국어","여행지: 태종대, 서면","5");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo4),
 				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.2~3","장동건","국적: 한국","사용가능 언어: 한국어, 중국어","여행지: 해운대","159");
+		
+		//yeun 150709 clickEvent
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            	
+            	Intent intent=new Intent(TravelerListActivity.this, TravelerDetails.class);
+				startActivity(intent);
+				
+            	/*
+                Intent intent = new Intent(context, SendMessage.class);
+                String message = "abc";
+                intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
+                */
+            	
+            }
+        });
 	}
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
