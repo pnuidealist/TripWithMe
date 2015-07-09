@@ -3,15 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:weightSum="16" >
+    android:orientation="vertical">
 
     <!-- 메뉴표시줄 -->
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_weight="4"
+        android:layout_height="40dp"
         android:background="@color/mainBarBgColor"
         android:orientation="horizontal" >
 
@@ -26,7 +24,16 @@
             android:layout_marginTop="7dp"
             android:background="@drawable/main_btn_popup_menu" />
 
-        
+        <Button
+            android:id="@+id/main_btn_logo"
+            android:layout_width="150dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/main_btn_logo"
+            android:scaleType="centerCrop" />
 
         <Button
             android:id="@+id/main_btn_mypage"
@@ -53,49 +60,6 @@
             android:layout_toLeftOf="@id/main_btn_mypage"
             android:layout_toStartOf="@id/main_btn_mypage"
             android:background="@drawable/main_btn_write_contents" />
-        
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_toEndOf="@id/main_btn_popup_menu"
-            android:layout_toRightOf="@id/main_btn_popup_menu"
-            android:layout_toStartOf="@id/main_btn_write_contents"
-            android:layout_toLeftOf="@id/main_btn_write_contents"
-            android:background="@drawable/profilelist_editbox_search"
-            android:orientation="horizontal" >
-			
-            <Button
-                android:id="@+id/main_btn_search"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginRight="10dp"
-            	android:layout_marginEnd="10dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/main_btn_search" />
-            <EditText
-                
-                android:id="@+id/traveler_list_searchEditText"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toLeftOf="@id/main_btn_search"
-                android:layout_toStartOf="@id/main_btn_search"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="2dp"
-                android:layout_marginStart="2dp"
-                android:textSize="11sp" />
-
-            
-        </RelativeLayout>
     </RelativeLayout>
 
     <!-- 메뉴표시줄 아래 전체 뷰_드로워레이아웃 -->
@@ -104,16 +68,18 @@
         android:id="@+id/dl_activity_main_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="12"
+        android:layout_weight="8"
         tools:context=".MainActivity" >
 
         <!-- 주요 뷰 -->
 
         <ListView
-            android:id="@+id/travelerList"
+            android:id="@+id/chatList"
             android:layout_width="match_parent"
             android:layout_height="match_parent" 
-            android:background="#999999"/>
+            android:divider="@null"
+			android:dividerHeight="0dp"
+            android:background="#FFFFFF"/>
 
         <!-- 드러워 -->
 
@@ -219,5 +185,59 @@
             </RelativeLayout>
         </LinearLayout>
     </android.support.v4.widget.DrawerLayout>
+    
+    <!-- 하단 메세지 입력바 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/mainBarBgColor"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/chat_emoticonAddBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/chat_addition" />
+        
+        <Button
+            android:id="@+id/chat_textSendBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/chat_send" />
+        
+        <EditText
+                android:id="@+id/chat_textInputBox"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/chat_textSendBtn"
+                android:layout_toStartOf="@id/chat_textSendBtn"
+                android:layout_toRightOf="@id/chat_emoticonAddBtn"
+                android:layout_toEndOf="@id/chat_emoticonAddBtn"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textSize="11sp" 
+                android:background="@drawable/chat_editbox"/>
+        
+        
+        
+    </RelativeLayout>
 
 </LinearLayout>

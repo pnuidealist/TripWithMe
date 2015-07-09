@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_right"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <!-- 프로필 사진 -->
+
+    <FrameLayout
+        android:id="@+id/chat_right_photo"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp" >
+
+        <ImageView
+            android:id="@+id/photo_right"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/char_checked" />
+
+        <ImageView
+            android:id="@+id/photoframe"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:maxHeight="62dp"
+            android:maxWidth="62dp"
+            android:src="@drawable/chat_photoframe" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/chat_right_photo"
+        android:layout_toStartOf="@id/chat_right_photo"
+        android:background="@drawable/chat_right"
+        android:paddingLeft="5dp" >
+
+        <TextView
+            android:id="@+id/chat_right_txtbx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="a" />
+    </FrameLayout>
+
+</RelativeLayout>

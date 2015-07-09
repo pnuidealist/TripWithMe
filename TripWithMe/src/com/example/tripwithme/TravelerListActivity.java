@@ -80,13 +80,13 @@ public class TravelerListActivity extends Activity {
 				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.2~3","장동건","국적: 한국","사용가능 언어: 한국어, 중국어","여행지: 해운대","159");
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login, menu);
-		return true;
-
-	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		// Inflate the menu; this adds items to the action bar if it is present.
+//		getMenuInflater().inflate(R.menu.login, menu);
+//		return true;
+//
+//	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

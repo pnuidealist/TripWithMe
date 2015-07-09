@@ -145,6 +145,7 @@ public class MainActivity extends Activity {
 		
 		//로긴 엑티비티 띄움 (임시)
 		Intent intent=new Intent(MainActivity.this, LoginActivity.class);
+		//Intent intent=new Intent(MainActivity.this, ChatActivity.class);
 		startActivity(intent);
 	}
 

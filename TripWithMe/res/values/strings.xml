@@ -59,5 +59,8 @@
 	<string name="listItem_nationality">nationality</string>
 	<string name="listItem_language">language</string>
 	<string name="listItem_attraction">attraction</string>
+	
+	<!-- needed for Chat -->
+	<string name="title_activity_Chat">ChatActivity</string>
 
 </resources>

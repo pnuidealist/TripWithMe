@@ -123,20 +123,6 @@
                         android:layout_toRightOf="@id/user_sel_spinner"
                         android:background="@drawable/main_btn_calendar" />
 
-                    <EditText
-                        android:id="@+id/searchText"
-                        android:layout_width="120dp"
-                        android:layout_height="fill_parent"
-                        android:layout_centerVertical="true"
-                        android:layout_marginBottom="0.5dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="0.5dp"
-                        android:layout_toEndOf="@id/calender"
-                        android:layout_toRightOf="@id/calender"
-                        android:hint="@string/search_helper"
-                        android:textSize="12sp" />
-
                     <Button
                         android:id="@+id/main_btn_search"
                         android:layout_width="20dp"
@@ -147,6 +133,24 @@
                         android:layout_marginEnd="12dp"
                         android:layout_marginRight="12dp"
                         android:background="@drawable/main_btn_search" />
+                    
+                    <EditText
+                        android:id="@+id/searchText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_toEndOf="@id/calender"
+                        android:layout_toRightOf="@id/calender"
+                        android:layout_toStartOf="@id/main_btn_search"
+                        android:layout_toLeftOf="@id/main_btn_search"
+                        android:hint="@string/search_helper"
+                        android:textSize="12sp" />
+
+                    
                 </RelativeLayout>
             </RelativeLayout>
             <!-- 트립위드미 추천 -->
