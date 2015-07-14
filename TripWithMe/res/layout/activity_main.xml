@@ -13,7 +13,7 @@
         android:layout_weight="4"
         android:background="@color/mainBarBgColor"
         android:orientation="horizontal" >
-
+"res/layout/activity_main.xml"
         <Button
             android:id="@+id/main_btn_popup_menu"
             android:layout_width="25dp"

@@ -3,13 +3,13 @@
     android:id="@+id/traveler_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="${relativePackage}.${activityClass}" >
+    android:background="@drawable/travelerdetails_sample" >
 
     <Button
         android:id="@+id/traveler_details_btn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
-        android:background="@null" />
+        />
 
 </RelativeLayout>

@@ -22,7 +22,7 @@ public class TravelerDetails extends Activity {
 		ActionBar actionBar = getActionBar();
 		actionBar.hide();
 
-		findViewById(R.id.traveler_details).setBackgroundDrawable(getResources().getDrawable(R.drawable.travelerdetails_sample));
+		//findViewById(R.id.traveler_details).setBackgroundDrawable(getResources().getDrawable(R.drawable.travelerdetails_sample));
 		
 		screenBtn = (Button)findViewById(R.id.traveler_details_btn);
 		

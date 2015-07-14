@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 	private TimerTask timerTask;
     private Timer timer;
     private int wallpaperTurn = 0;
-    private static Handler handler;
+    //private static Handler handler;
 	
 	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
 	ImageView profile_picture; //메뉴 안 프로필 사진
@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
 		
 		//jjy 050705) 배경화면 바뀌는 효과 추가
-		handler = new Handler(){
+		final Handler handler = new Handler(){
 			public void handleMessage(Message msg){
 				switch(wallpaperTurn){
 				case 0:
@@ -94,7 +94,7 @@ public class MainActivity extends Activity {
 			
 		};
 		timer = new Timer();
-		timer.schedule(timerTask, 3000, 3000);
+		timer.schedule(timerTask, 3000, 7000);
 		
 		//jjy 050705) 검색 버튼
 		searchBtn.setOnClickListener(new View.OnClickListener() {
