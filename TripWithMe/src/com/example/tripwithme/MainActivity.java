@@ -3,18 +3,18 @@ package com.example.tripwithme;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.example.tripwithme.R;
+import com.example.tripwithme.R.drawable;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -58,29 +58,30 @@ public class MainActivity extends Activity {
 		wallpaper=(RelativeLayout)findViewById(R.id.main_layout_wallpaper);
 		navBarButton=(Button)findViewById(R.id.main_btn_popup_menu);
 		
+		final Drawable wall1 = getResources().getDrawable(R.drawable.wall1);
+		final Drawable wall2 = getResources().getDrawable(R.drawable.wall2);
+		final Drawable wall3 = getResources().getDrawable(R.drawable.wall3);
+		final Drawable wall4 = getResources().getDrawable(R.drawable.wall4);
+		
 		//jjy 050705) 배경화면 바뀌는 효과 추가
 		handler = new Handler(){
 			public void handleMessage(Message msg){
 				switch(wallpaperTurn){
 				case 0:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.brazil));
+					wallpaper.setBackgroundDrawable(wall1);
 					wallpaperTurn++;
 					break;
 				case 1:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.wall1));
+					wallpaper.setBackgroundDrawable(wall2);
 					wallpaperTurn++;
 					break;
 				case 2:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.wall2));
+					wallpaper.setBackgroundDrawable(wall3);
 					wallpaperTurn++;
 					break;	
 				case 3:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.wall3));
-					wallpaperTurn++;
-					break;	
-				case 4:
-					wallpaper.setBackgroundDrawable(getResources().getDrawable(R.drawable.wall4));
-					wallpaperTurn = 0;
+					wallpaper.setBackgroundDrawable(wall4);
+					wallpaperTurn=0;
 					break;
 				}
 			}

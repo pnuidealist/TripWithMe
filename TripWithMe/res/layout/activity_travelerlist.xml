@@ -13,6 +13,7 @@
         android:layout_height="50dp"
         android:layout_weight="4"
         android:background="@color/mainBarBgColor"
+        android:descendantFocusability="afterDescendants"
         android:orientation="horizontal" >
 
         <Button
@@ -92,6 +93,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="2dp"
                 android:layout_marginStart="2dp"
+                android:hint="@string/search_helper"
                 android:textSize="11sp" />
 
             

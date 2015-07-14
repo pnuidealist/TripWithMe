@@ -12,7 +12,7 @@
     <string name="list_item_02">helper</string>
 
     <!-- for main activity searchbar -->
-    <string name="search_helper">도시, 랜드마크, 키워드로 검색하세요</string>
+    <string name="search_helper">도시,랜드마크,키워드로 검색하세요</string>
 
     <!-- for login activity -->
     <string name="title_activity_login">LoginActivity</string>

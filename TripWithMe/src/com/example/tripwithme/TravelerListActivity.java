@@ -1,6 +1,7 @@
 package com.example.tripwithme;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -9,12 +10,14 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 
 //150705 jjy)
@@ -25,13 +28,17 @@ public class TravelerListActivity extends Activity {
 	private Button navBarButton;
 	private Button main_btn_mypage;
 	private ImageView profile_picture;
-
+	private EditText searchEditText;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_travelerlist);
 		getActionBar().hide();
-
+		
+		//검색창 자동 키보드 뜨는 현상 해결
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+		
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
 		//jjy 050707) 그림자 제거하고 어두워짐
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);

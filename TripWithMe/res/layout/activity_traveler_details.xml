@@ -3,7 +3,7 @@
     android:id="@+id/traveler_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="${relativePackage}.${activityClass}" >
+    android:background="@drawable/travelerdetails">
 
     <Button
         android:id="@+id/traveler_details_btn"
