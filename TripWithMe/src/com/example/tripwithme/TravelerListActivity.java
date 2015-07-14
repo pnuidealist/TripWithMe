@@ -95,7 +95,7 @@ public class TravelerListActivity extends Activity {
             	
             	Intent intent=new Intent(TravelerListActivity.this, TravelerDetails.class);
 				startActivity(intent);
-				
+				finish();
             	/*
                 Intent intent = new Intent(context, SendMessage.class);
                 String message = "abc";
