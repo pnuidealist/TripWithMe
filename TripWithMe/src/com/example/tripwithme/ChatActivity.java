@@ -33,7 +33,6 @@ public class ChatActivity extends Activity {
 	private Boolean isTimerSet = false;
 	private ListView listView;
 	private ChatListAdapter listAdapter;
-	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,18 +63,20 @@ public class ChatActivity extends Activity {
 				listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo1), userInput, false);
 				hasUserEnteredMsg = true; // 이 변수가 true라면 timerTast가 답장을 보내고
 											// false로 만듬.
-				if ( ! isTimerSet){
+				if (!isTimerSet) {
 					timer.schedule(timerTask, 1500, 3000);
 					isTimerSet = true;
 				}
 				
-					listView.post(new Runnable() {
-			        @Override
-			        public void run() {
-			            // Select the last row so it will scroll into view...
-			            listView.setSelection(listAdapter.getCount() - 1);
-			        }
-			    });
+				textInputBox.setText("");
+
+				listView.post(new Runnable() {
+					@Override
+					public void run() {
+						// Select the last row so it will scroll into view...
+						listView.setSelection(listAdapter.getCount() - 1);
+					}
+				});
 			}
 		});
 
@@ -93,7 +94,6 @@ public class ChatActivity extends Activity {
 			}
 		});
 
-		
 		final Handler chatHandler = new Handler() {
 			public void handleMessage(Message msg) {
 				switch (garaChatCnt) {
@@ -122,6 +122,9 @@ public class ChatActivity extends Activity {
 					}
 					break;
 				}
+				// Select the last row so it will scroll into view...
+				listView.setSelection(listAdapter.getCount() - 1);
+				
 			}
 		};
 

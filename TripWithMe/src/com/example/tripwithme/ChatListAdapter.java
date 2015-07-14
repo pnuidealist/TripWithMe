@@ -77,6 +77,8 @@ public class ChatListAdapter extends BaseAdapter{
 		newItem.talk = text;
 		list.add(newItem);
 		notifyDataSetChanged();
+		
+		// Select the last row so it will scroll into view...
 	}
 
 }
