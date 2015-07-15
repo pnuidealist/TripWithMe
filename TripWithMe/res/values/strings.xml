@@ -64,5 +64,7 @@
     <string name="listItem_attraction">attraction</string>
     <string name="title_activity_traveler_details">TravelerDetails</string>
     <string name="title_activity_market">MarketActivity</string>
+    <string name="title_activity_real_time_char_list">RealTimeCharListActivity</string>
+    <string name="title_activity_real_time_chat">RealTimeChatActivity</string>
 
 </resources>
