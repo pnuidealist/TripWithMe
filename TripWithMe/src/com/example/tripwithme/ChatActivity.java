@@ -9,7 +9,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.app.DialogFragment;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +28,7 @@ public class ChatActivity extends Activity {
 	private Button navBarButton;
 	private Button main_btn_mypage;
 	private Button sendButton;
-	private Button btnCalendar;//yeun20150715
+	private Button calenderButton;//yeun20150715
 	private EditText textInputBox;
 	private Timer timer;
 	private TimerTask timerTask;
@@ -52,7 +54,7 @@ public class ChatActivity extends Activity {
 		textInputBox = (EditText) findViewById(R.id.chat_textInputBox);
 		profile_picture = (ImageView) findViewById(R.id.drawer_picture);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
-		btnCalendar = (Button) findViewById(R.id.chat_calendar);
+		calenderButton = (Button) findViewById(R.id.chat_calendar);
 		
 		listView = (ListView) findViewById(R.id.chatList);
 		listAdapter = new ChatListAdapter(this);
@@ -98,10 +100,11 @@ public class ChatActivity extends Activity {
 		});
 		
 		//yeun20150715
-		btnCalendar.setOnClickListener(new View.OnClickListener() {
+		calenderButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
+//				ChatActivityCalenderDialogFragment dialog = new ChatActivityCalenderDialogFragment();
+//				dialog.confirmFireMissiles();
 			}
 		});
 		//////////////////////////////////////

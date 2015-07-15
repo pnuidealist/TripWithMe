@@ -5,5 +5,10 @@
         <item>@string/list_item_01</item>
         <item>@string/list_item_02</item>
     </string-array>
+    
+    <string-array name="chat_activity_dialog_chklist">
+        <item>11</item>
+        <item>22</item>
+    </string-array>
  
 </resources>

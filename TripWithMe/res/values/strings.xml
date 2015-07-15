@@ -66,5 +66,9 @@
     <string name="title_activity_market">MarketActivity</string>
     <string name="title_activity_real_time_char_list">RealTimeCharListActivity</string>
     <string name="title_activity_real_time_chat">RealTimeChatActivity</string>
-
+    
+	<!-- needed for chat_activity_dialog -->
+	<string name="choose_days">날짜를 고르세요</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
 </resources>

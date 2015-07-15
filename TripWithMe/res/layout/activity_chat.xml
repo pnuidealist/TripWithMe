@@ -71,7 +71,7 @@
             android:layout_height="match_parent" 
             android:divider="@null"
 			android:dividerHeight="0dp"
-            android:background="@drawable/sea1"/>
+            android:background="@drawable/glass2"/>
 
         <!-- 드러워 -->
 
