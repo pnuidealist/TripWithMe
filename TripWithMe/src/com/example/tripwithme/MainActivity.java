@@ -37,6 +37,7 @@ public class MainActivity extends Activity {
 	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
 	ImageView profile_picture; //메뉴 안 프로필 사진
 	ImageView imgviewMarket; //yeun150715 메뉴 안 마켓 이동 아이콘
+	ImageView imgviewRealTimeChat; //yeun150715 메뉴 안 실시간채팅 이동 아이콘
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +49,11 @@ public class MainActivity extends Activity {
 		
 		profile_picture=(ImageView)findViewById(R.id.drawer_picture);
 		imgviewMarket = (ImageView)findViewById(R.id.drawer_market);//yeun150715
+		imgviewRealTimeChat = (ImageView)findViewById(R.id.drawer_talk);//yeun150715
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
 		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
 		searchBtn = (Button)findViewById(R.id.main_btn_search);
-		
+
 		//jjy 050704) drawerlayout 그림자 추가 
 		//jjy 050707) 그림자 제거하고 어두워지게
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
@@ -118,16 +120,26 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		//yeun150715 마켓 이동 이벤트
-		//프로필 사진 버튼
-				imgviewMarket.setOnClickListener(new View.OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						Intent intent=new Intent(MainActivity.this, MarketActivity.class);
-						startActivity(intent);
-					}
-				});
+		//yeun150715
+		//네이게이션바에서 마켓 이동 버튼
+		imgviewMarket.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(MainActivity.this, MarketActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		//네이게이션바에서 실시간채팅 이동 버튼
+		imgviewRealTimeChat.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(MainActivity.this, RealTimeChatListActivity.class);
+				startActivity(intent);
+			}
+		});
 		///////////////////////////////////
 				
 				
