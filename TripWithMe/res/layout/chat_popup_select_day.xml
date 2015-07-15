@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:background="@drawable/char_popup" >
+
+    <checkbox
+        android:id="@+id/chkbox_select_day1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="2015.7.1 해운대" >
+    </checkbox>
+    <checkbox
+        android:id="@+id/chkbox_select_day2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="2015.7.2 남포동" >
+    </checkbox>
+    <checkbox
+        android:id="@+id/chkbox_select_day3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="2015.7.3 광안리" >
+    </checkbox>
+
+</LinearLayout>
