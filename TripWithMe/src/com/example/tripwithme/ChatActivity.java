@@ -5,19 +5,23 @@ import java.util.TimerTask;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 
 public class ChatActivity extends Activity {
 	private ImageView profile_picture; // 메뉴 안 프로필 사진
@@ -33,7 +37,11 @@ public class ChatActivity extends Activity {
 	private Boolean isTimerSet = false;
 	private ListView listView;
 	private ChatListAdapter listAdapter;
-
+	private Button calender;
+	private LayoutInflater inflater;
+	private View selectDaysWindow;
+	private PopupWindow popupWindow;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,16 +52,32 @@ public class ChatActivity extends Activity {
 
 		timer = new Timer();
 		garaChatCnt = 0;
+		calender = (Button) findViewById(R.id.chat_calendar);
 		sendButton = (Button) findViewById(R.id.chat_textSendBtn);
 		navBarButton = (Button) findViewById(R.id.main_btn_popup_menu);
 		main_btn_mypage = (Button) findViewById(R.id.main_btn_mypage);
 		textInputBox = (EditText) findViewById(R.id.chat_textInputBox);
 		profile_picture = (ImageView) findViewById(R.id.drawer_picture);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
-
+		//날짜선택 팝업창 띄우기
+		inflater = (LayoutInflater) ChatActivity.this
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		selectDaysWindow = inflater.inflate(R.layout.chat_popup_select_day, (ViewGroup) findViewById(R.layout.chat_popup_select_day));
+		popupWindow = new PopupWindow(selectDaysWindow, 300, 300, true);
+		
 		listView = (ListView) findViewById(R.id.chatList);
 		listAdapter = new ChatListAdapter(this);
 		listView.setAdapter(listAdapter);
+		
+		//calenderButton
+		calender.setOnClickListener(new View.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				popupWindow.showAtLocation(selectDaysWindow, Gravity.CENTER, 50, 150);
+			}
+		});
+		
 		// sendButton
 		sendButton.setOnClickListener(new View.OnClickListener() {
 
@@ -94,6 +118,7 @@ public class ChatActivity extends Activity {
 			}
 		});
 
+		//채팅에서 유저가 전달한 대화에 대한 자동응답 처리
 		final Handler chatHandler = new Handler() {
 			public void handleMessage(Message msg) {
 				switch (garaChatCnt) {
