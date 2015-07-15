@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class ChatActivity extends Activity {
 	private ImageView profile_picture; // 메뉴 안 프로필 사진
@@ -25,6 +26,7 @@ public class ChatActivity extends Activity {
 	private Button navBarButton;
 	private Button main_btn_mypage;
 	private Button sendButton;
+	private Button btnCalendar;//yeun20150715
 	private EditText textInputBox;
 	private Timer timer;
 	private TimerTask timerTask;
@@ -50,7 +52,8 @@ public class ChatActivity extends Activity {
 		textInputBox = (EditText) findViewById(R.id.chat_textInputBox);
 		profile_picture = (ImageView) findViewById(R.id.drawer_picture);
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
-
+		btnCalendar = (Button) findViewById(R.id.chat_calendar);
+		
 		listView = (ListView) findViewById(R.id.chatList);
 		listAdapter = new ChatListAdapter(this);
 		listView.setAdapter(listAdapter);
@@ -93,7 +96,18 @@ public class ChatActivity extends Activity {
 				//
 			}
 		});
+		
+		//yeun20150715
+		btnCalendar.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				
+			}
+		});
+		//////////////////////////////////////
 
+		
+		
 		final Handler chatHandler = new Handler() {
 			public void handleMessage(Message msg) {
 				switch (garaChatCnt) {
