@@ -36,7 +36,8 @@ public class MainActivity extends Activity {
 	
 	Button main_btn_mypage; //오른쪽 위 마이페이지 아이콘
 	ImageView profile_picture; //메뉴 안 프로필 사진
-
+	ImageView imgviewMarket; //yeun150715 메뉴 안 마켓 이동 아이콘
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,6 +47,7 @@ public class MainActivity extends Activity {
 		actionBar.hide();
 		
 		profile_picture=(ImageView)findViewById(R.id.drawer_picture);
+		imgviewMarket = (ImageView)findViewById(R.id.drawer_market);//yeun150715
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_activity_main_drawer);
 		main_btn_mypage=(Button)findViewById(R.id.main_btn_mypage);
 		searchBtn = (Button)findViewById(R.id.main_btn_search);
@@ -116,6 +118,19 @@ public class MainActivity extends Activity {
 			}
 		});
 		
+		//yeun150715 마켓 이동 이벤트
+		//프로필 사진 버튼
+				imgviewMarket.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						Intent intent=new Intent(MainActivity.this, MarketActivity.class);
+						startActivity(intent);
+					}
+				});
+		///////////////////////////////////
+				
+				
 		//drawerLayout 온오프 버튼(햄버거 버튼)
 		navBarButton.setOnClickListener(new View.OnClickListener() {
 			@Override

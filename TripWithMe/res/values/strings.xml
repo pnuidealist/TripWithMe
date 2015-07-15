@@ -51,10 +51,8 @@
     <string name="profile_hobby">취미</string>
     <string name="img_view1">img</string>
 
-	
-	<!-- needed for Chat -->
-	<string name="title_activity_Chat">ChatActivity</string>
-
+    <!-- needed for Chat -->
+    <string name="title_activity_Chat">ChatActivity</string>
 
     <!-- needed for travelerlist -->
     <string name="title_activity_TravelerList">TravelerListActivity</string>
@@ -65,5 +63,6 @@
     <string name="listItem_language">language</string>
     <string name="listItem_attraction">attraction</string>
     <string name="title_activity_traveler_details">TravelerDetails</string>
+    <string name="title_activity_market">MarketActivity</string>
 
 </resources>
