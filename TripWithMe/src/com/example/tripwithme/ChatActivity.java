@@ -1,19 +1,18 @@
 package com.example.tripwithme;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v4.app.DialogFragment;
 import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -37,6 +36,8 @@ public class ChatActivity extends Activity {
 	private Boolean isTimerSet = false;
 	private ListView listView;
 	private ChatListAdapter listAdapter;
+	private CharSequence[] items = { "2015.7.1 해운대", "2015.7.2 남포동", "2015.7.3 광안리" };//다이얼로그 창 체크 목록
+	private ArrayList<String> mSelectedItems = new ArrayList<String>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -103,8 +104,29 @@ public class ChatActivity extends Activity {
 		calenderButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				ChatActivityCalenderDialogFragment dialog = new ChatActivityCalenderDialogFragment();
-//				dialog.confirmFireMissiles();
+				new AlertDialog.Builder(ChatActivity.this)
+				.setTitle("가이드 날짜 선택")
+//				.setMessage("시간 초과!!!")
+//				.setCancelable(false)	// Back Button 동작 안하도록 설정
+				.setMultiChoiceItems(items, null,
+						new DialogInterface.OnMultiChoiceClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+//								 if (isChecked) {
+//								 mSelectedItems.add(which);
+//								 } else if (mSelectedItems.contains(which)) {
+//								 mSelectedItems.remove(Integer.valueOf(which));
+//								 }
+							}
+						})
+				// "종료" 버튼
+				.setNegativeButton("결정", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						Toast.makeText(ChatActivity.this, "결정함", Toast.LENGTH_SHORT).show();						
+					}
+				})
+
+				.show();
 			}
 		});
 		//////////////////////////////////////
