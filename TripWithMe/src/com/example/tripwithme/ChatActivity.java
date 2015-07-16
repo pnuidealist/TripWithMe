@@ -8,6 +8,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -28,6 +29,10 @@ public class ChatActivity extends Activity {
 	private Button main_btn_mypage;
 	private Button sendButton;
 	private Button calenderButton;//yeun20150715
+	
+	private ImageView imgviewMarket; //jjy20150716 메뉴 안 마켓 이동 아이콘
+	private ImageView imgviewRealTimeChat; //jjy20150716 메뉴 안 실시간채팅 이동 아이콘
+	
 	private EditText textInputBox;
 	private Timer timer;
 	private TimerTask timerTask;
@@ -49,6 +54,8 @@ public class ChatActivity extends Activity {
 
 		timer = new Timer();
 		garaChatCnt = 0;
+		imgviewMarket = (ImageView)findViewById(R.id.drawer_market);
+		imgviewRealTimeChat = (ImageView)findViewById(R.id.drawer_talk);
 		sendButton = (Button) findViewById(R.id.chat_textSendBtn);
 		navBarButton = (Button) findViewById(R.id.main_btn_popup_menu);
 		main_btn_mypage = (Button) findViewById(R.id.main_btn_mypage);
@@ -102,6 +109,7 @@ public class ChatActivity extends Activity {
 		
 		//yeun20150715
 		calenderButton.setOnClickListener(new View.OnClickListener() {
+			//jjy20150716
 			@Override
 			public void onClick(View v) {
 				new AlertDialog.Builder(ChatActivity.this)
@@ -127,6 +135,27 @@ public class ChatActivity extends Activity {
 				})
 
 				.show();
+			}
+		});
+		
+		//jjy150716
+				//네이게이션바에서 마켓 이동 버튼
+		imgviewMarket.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(ChatActivity.this, MarketActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		// 네이게이션바에서 실시간채팅 이동 버튼
+		imgviewRealTimeChat.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(ChatActivity.this, RealTimeChatListActivity.class);
+				startActivity(intent);
 			}
 		});
 		//////////////////////////////////////
