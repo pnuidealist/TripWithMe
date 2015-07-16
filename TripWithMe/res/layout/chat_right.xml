@@ -15,7 +15,8 @@
         android:layout_height="62dp"
         android:layout_alignParentRight="true"
         android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp" >
+        android:layout_marginRight="5dp"
+        android:visibility="gone" >
 
         <ImageView
             android:id="@+id/photo_right"
@@ -39,8 +40,11 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_toLeftOf="@id/chat_right_photo"
         android:layout_toStartOf="@id/chat_right_photo"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:background="@drawable/chat_right"
         android:paddingLeft="5dp" >
 

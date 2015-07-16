@@ -80,7 +80,7 @@ public class TravelerListActivity extends Activity {
 
 		// 리스트뷰 목록 추가
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo1),
-				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.1~3","제시카 알바","국적: 미국","사용가능 언어: 한국어, 영어","여행지: 남포동, 해운대","26");
+				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.2~3","제시카 알바","국적: 미국","사용가능 언어: 한국어, 영어","여행지: 남포동, 해운대","159");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo2),
 				getResources().getDrawable(R.drawable.profilelist_photo_bkgnd), "2015.07.2~5","스칼렛 요한슨","국적: 미국","사용가능 언어: 한국어, 영어","여행지: 부산대, 서면, 광안리","56");
 		mAdapter.addItem(getResources().getDrawable(R.drawable.profilelist_photo3),

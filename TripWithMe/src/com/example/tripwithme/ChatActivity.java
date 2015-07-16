@@ -36,7 +36,7 @@ public class ChatActivity extends Activity {
 	private Boolean isTimerSet = false;
 	private ListView listView;
 	private ChatListAdapter listAdapter;
-	private CharSequence[] items = { "2015.7.1 해운대", "2015.7.2 남포동", "2015.7.3 광안리" };//다이얼로그 창 체크 목록
+	private CharSequence[] items = { "2015.7.2 해운대", "2015.7.3 남포동" };//다이얼로그 창 체크 목록
 	private ArrayList<String> mSelectedItems = new ArrayList<String>();
 
 	@Override
@@ -138,7 +138,7 @@ public class ChatActivity extends Activity {
 				switch (garaChatCnt) {
 				case 0:
 					if (hasUserEnteredMsg == true) {
-						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo3), "hello what's up?",
+						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo1), "hello what's up?",
 								true);
 						hasUserEnteredMsg = false;
 						garaChatCnt++;
@@ -146,7 +146,7 @@ public class ChatActivity extends Activity {
 					break;
 				case 1:
 					if (hasUserEnteredMsg == true) {
-						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo3),
+						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo1),
 								"It's not easy to satisfy me ", true);
 						hasUserEnteredMsg = false;
 						garaChatCnt++;
@@ -154,7 +154,7 @@ public class ChatActivity extends Activity {
 					break;
 				case 2:
 					if (hasUserEnteredMsg == true) {
-						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo3), "OK^^", true);
+						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo1), "OK^^", true);
 						hasUserEnteredMsg = false;
 						garaChatCnt++;
 						timer.cancel();

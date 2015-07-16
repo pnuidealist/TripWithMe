@@ -31,6 +31,10 @@
             android:label="@string/title_activity_profile" >
         </activity>
         <activity
+            android:name=".MyProfileActivity"
+            android:label="@string/title_activity_my_profile" >
+        </activity>
+        <activity
             android:name=".TravelerListActivity"
             android:label="@string/title_activity_TravelerList" >
         </activity>

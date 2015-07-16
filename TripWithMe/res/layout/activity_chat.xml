@@ -33,7 +33,7 @@
             android:layout_marginBottom="2dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="장동건"
+            android:text="제시카 알바"
             android:textColor="#ffffff"
             android:textSize="20sp"
             android:textStyle="bold"
