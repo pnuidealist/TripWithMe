@@ -59,12 +59,12 @@
                 android:gravity="center" >
 
                 <Button
-                    android:id="@+id/resendBtn"
+                    android:id="@+id/sendBtn"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_weight="1"
                     android:background="@drawable/login_btn_ok2"
-                    android:text="@string/resend"
+                    android:text="@string/send_authentication_number"
                     android:textSize="6.5pt" />
 
                 <Button

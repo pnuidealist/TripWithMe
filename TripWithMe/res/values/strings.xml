@@ -20,6 +20,8 @@
     <string name="okBtn">확인</string>
     <string name="samplePhone">+82)010-1234-5678</string>
     <string name="certNo">인증번호</string>
+    <string name="send_authentication_number">인증번호 발송</string>
+    
 
     <!-- for profile writting -->
     <string name="title_activity_profile">ProfileActivity</string>

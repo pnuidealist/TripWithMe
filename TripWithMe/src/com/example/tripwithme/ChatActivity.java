@@ -77,7 +77,7 @@ public class ChatActivity extends Activity {
 				hasUserEnteredMsg = true; // 이 변수가 true라면 timerTast가 답장을 보내고
 											// false로 만듬.
 				if (!isTimerSet) {
-					timer.schedule(timerTask, 1500, 3000);
+					timer.schedule(timerTask, 1500, 7000);
 					isTimerSet = true;
 				}
 				
@@ -165,7 +165,7 @@ public class ChatActivity extends Activity {
 		final Handler chatHandler = new Handler() {
 			public void handleMessage(Message msg) {
 				switch (garaChatCnt) {
-				case 0:
+				case 0://hello!
 					if (hasUserEnteredMsg == true) {
 						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo1), "hello what's up?",
 								true);
@@ -173,15 +173,15 @@ public class ChatActivity extends Activity {
 						garaChatCnt++;
 					}
 					break;
-				case 1:
+				case 1://I would like to guide you on days you referred.
 					if (hasUserEnteredMsg == true) {
 						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo1),
-								"It's not easy to satisfy me ", true);
+								"I was waiting for someone like you to help me thanks", true);
 						hasUserEnteredMsg = false;
 						garaChatCnt++;
 					}
 					break;
-				case 2:
+				case 2:// 체크박스 고르고 good see you soon^^
 					if (hasUserEnteredMsg == true) {
 						listAdapter.addItem(getResources().getDrawable(R.drawable.chat_photo1), "OK^^", true);
 						hasUserEnteredMsg = false;

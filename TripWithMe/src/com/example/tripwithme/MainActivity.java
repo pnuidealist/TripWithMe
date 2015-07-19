@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
 			
 		};
 		timer = new Timer();
-		timer.schedule(timerTask, 3000, 7000);
+		timer.schedule(timerTask, 3000, 3000);
 		
 		//jjy 050705) 검색 버튼
 		searchBtn.setOnClickListener(new View.OnClickListener() {
